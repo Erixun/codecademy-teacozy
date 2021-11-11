@@ -1,3 +1,4 @@
+/* GENERAL STYLING */
 
 body {
   font-family: Helvetica;
@@ -6,4 +7,162 @@ body {
   background-color: black;
   opacity: 0.9;
   text-align: center;
+  --header-height: 69px;
+  --bgc: black;
+}
+
+body>* {
+  width: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+h2, h3, h4, figcaption {
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+/* HEADER STYLING */
+
+body>header {
+  height: var(--header-height);
+  border-bottom: 1px solid seashell;
+  padding: 0 10px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: inherit;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 25px;
+  font-size: 0.95em;
+}
+
+nav li a {
+  color: inherit;
+}
+
+.logo {
+  height: 50px;
+}
+
+/* MAIN STYLING */
+
+main {
+  margin-top: var(--header-height);
+  padding: 0 30px;
+  display: flex;
+  flex-flow: column;
+}
+
+.hero {
+  height: 700px;
+  display: flex;
+  position: center;
+  justify-content: center;
+  align-items: center;
+  background-image: url('img/img-mission-background.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-header {
+  width: 1200px;
+  background-color: var(--bgc);
+  padding: 11px;
+}
+
+.hero-header h2, .hero-header h4 {
+  margin: 0;
+}
+
+.hero-header h2 {
+  margin-bottom: 20px;
+}
+
+.featured {
+  width: 1000px;
+  margin: 100px auto;
+}
+
+.featured ul {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.featured figure {
+  margin: 0;
+}
+.featured figcaption {
+  margin-top: 11px;
+}
+
+.featured img {
+  height: 200px;
+  width: 300px;
+}
+
+
+.locations {
+  height: 500px;
+  background-image: url('img/img-locations-background.webp');
+  background-position: center;
+  background-size: cover;
+  padding: 55px;
+}
+
+.locations h2 {
+  margin-bottom: 15px;
+}
+
+.locations ul {
+  justify-content: center;
+  column-gap: 40px;
+}
+
+.location {
+  background: var(--bgc);
+  padding: 15px 10px 30px;
+  width: 300px;
+}
+.location h3 {
+  margin-top: 0;
+  margin-bottom: 35px
+}
+
+.locations address ul {
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contact {
+  height: 200px;
+}
+.contact h2 {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+footer {
+  font-size: 0.8em;
+  text-align: left;
+  padding: 30px 20px;
+  font-weight: bold;
 }
